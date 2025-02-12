@@ -1,11 +1,13 @@
-<div>
-  <nav class="nav-bar">
-    <a class="nav-brand" routerLink="/">Redaruu</a>
-    <ul class="nav-links">
-      <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/galleria">Galleria</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/contatti">Contatti</a></li>
-    </ul>
-  </nav>
-</div>
+<nav class="nav-bar" [ngClass]="{'scrolled': isScrolled}">
+  <a class="nav-brand" routerLink="/">Redaruu</a>
+  <ul class="nav-links">
+    <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+    <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/galleria">Galleria</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contatti">Contatti</a>
+    </li>
+  </ul>
+</nav>

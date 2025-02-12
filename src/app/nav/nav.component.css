@@ -1,9 +1,19 @@
 .nav-bar {
-  background-color: #aa0000;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  background: rgba(0, 0, 0, 0.93);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  z-index: 1000;
+}
+.nav-bar.scrolled {
+  background: rgba(0, 0, 0, 0.3); /* More transparent background */
+  backdrop-filter: blur(10px); /* Increased blur effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Slightly more prominent shadow */
 }
 .nav-brand {
   display: flex;
@@ -14,7 +24,7 @@
   font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
-  margin-left: 3rem;
+  margin-left: 20rem;
 }
 .nav-links {
   display: flex;
