@@ -1,14 +1,16 @@
 .nav-bar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.93);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.8px);
+  background: transparent;
+  transition: background 0.3s ease-out;
   z-index: 1000;
+
 }
 .nav-bar.scrolled {
   background: rgba(0, 0, 0, 0.3); /* More transparent background */
