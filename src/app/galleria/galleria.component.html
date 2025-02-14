@@ -1,1 +1,54 @@
-<p>galleria works!</p>
+<div class="contenitore-pagina">
+<app-nav></app-nav>
+<div class="banner">
+  <div class="banner-images">
+    <img src="assets/immagini/banner1.JPG" alt="Banner 1">
+    <img src="assets/immagini/banner2.JPG" alt="Banner 2">
+    <img src="assets/immagini/banner3.JPG" alt="Banner 3">
+    <img src="assets/immagini/banner4.JPG" alt="Banner 4">
+    <img src="assets/immagini/banner5.JPG" alt="Banner 5">
+    <img src="assets/immagini/banner6.JPG" alt="Banner 6">
+  </div>
+  <div class="banner-text">
+    <h1>Galleria fotografica</h1>
+  </div>
+</div>
+<!--<div class="keyword-selector">
+  <label for="keyword">Cerca per personaggio:</label>
+  <select id="keyword" (change)="onKeywordChange($event)">
+    <optgroup label="Personaggi">
+      <option></option>
+      <option value="Yennefer">Yennefer di Vengerberg</option>
+      <option value="#triss">Triss Merigold</option>
+      <option value="#2b">2B</option>
+      <option value="#a2">A2</option>
+      <option value="#emilia">Emilia</option>
+      <option value="#jinx">Jinx</option>
+      <option value="#yor">Yor</option>
+      <option value="#albedo">Albedo</option>
+      <option value="#ariel">Ariel</option>
+      <option value="#lucy">Lucyna Kushinada/Lucy</option>
+      <option value="#hinata">Hinata Hyuga</option>
+      <option value="#zerotwo">Zero Two</option>
+      <option value="#marin">Marin Kitagawa</option>
+      <option value="#rosalina">Rosalinda/Rosalina</option>
+      <option value="#rei">Rei Ayanami</option>
+      <option value="#nezuko">Nezuko</option>
+      <option value="#daki">Daki</option>
+    </optgroup>
+  </select>
+</div>
+
+<div class="galleria">
+  <div class="card" *ngFor="let photo of photos">
+    <img [src]="getDisplayUrl(photo)" alt="Foto IG" />
+    <p>{{ photo.caption }}</p>
+  </div>
+</div> -->
+<div class="cosplay-gallery">
+  <div class="cosplay-banner">
+    <img src="assets/immagini/banner-cosplay.JPG" alt="Banner Cosplay">
+  </div>
+</div>
+<app-footer></app-footer>
+</div>
