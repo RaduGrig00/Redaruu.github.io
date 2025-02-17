@@ -1,0 +1,101 @@
+<div class="contenitore-pagina">
+  <div>
+    <app-nav></app-nav>
+  </div>
+  <div class="pg">
+    <h2>{{ 'SEARCH.TITLE' | translate }}</h2>
+    <div class="search">
+      <label for="keyword">{{ 'SEARCH.LABEL' | translate }}</label>
+      <select id="keyword" [(ngModel)]="selectedPg">
+        <optgroup label="Personaggi">
+          <option value="yennefer">Yennefer di Vengerberg</option>
+          <option value="triss">Triss Merigold</option>
+          <option value="2b">2B</option>
+          <option value="a2">A2</option>
+          <option value="emilia">Emilia</option>
+          <option value="jinx">Jinx</option>
+          <option value="yor">Yor</option>
+          <option value="albedo">Albedo</option>
+          <option value="ariel">Ariel</option>
+          <option value="lucy">Lucyna Kushinada/Lucy</option>
+          <option value="hinata">Hinata Hyuga</option>
+          <option value="zerotwo">Zero Two</option>
+          <option value="marin">Marin Kitagawa</option>
+          <option value="rosalina">Rosalinda/Rosalina</option>
+          <option value="rei">Rei Ayanami</option>
+          <option value="nezuko">Nezuko</option>
+          <option value="daki">Daki</option>
+          <option value="zelda">Zelda</option>
+          <option value="sakura">Sakura Haruno</option>
+          <option value="syleny">Syleny (OC)</option>
+          <option value="meridiumriaele">Meridiumriaele (OC)</option>
+          <option value="nnumeth">Nnumeth</option>
+          <option value="nilou">Nilou</option>
+          <option value="ciri">Ciri</option>
+          <option value="ahri">Ahri</option>
+          <option value="sdm">Spider Demon Mother (Demon Slayer)</option>
+          <option value="evelynn">Evelynn</option>
+          <option value="yumeko">Yumeko</option>
+          <option value="asuna">Asuna</option>
+          <option value="rem">Rem</option>
+          <option value="mitsuri">Mitsuri</option>
+          <option value="kanae">Kanae</option>
+          <option value="elizabeth">Elizabeth</option>
+          <option value="touka">Touka</option>
+          <option value="kakyoin">Kakyoin</option>
+          <option value="itachi">Itachi</option>
+        </optgroup>
+      </select>
+      <button (click)="searchPg()">{{ 'SEARCH.BUTTON' | translate }}</button>
+    </div>
+  </div>
+  <div class="pg-gallery" *ngIf="pgPhotos.length > 0">
+    <button
+      class="button prev"
+      (click)="previousImage()"
+      *ngIf="currentImageIndex > 0"
+    >
+      &#8592;
+    </button>
+    <div class="pg-card">
+      <img
+        [src]="pgPhotos[currentImageIndex]"
+        (error)="handleImageError($event)"
+        alt="PG Photo"
+        loading="lazy"
+      />
+    </div>
+    <button
+      class="button next"
+      (click)="nextImage()"
+      *ngIf="currentImageIndex < pgPhotos.length - 1"
+    >
+      &#8594;
+    </button>
+  </div>
+  <div class="cards-container" *ngIf="!showPgGallery">
+
+    <div class="gallery-card" *ngFor="let photo of photos">
+      <h2>{{ 'INSTAGRAM.LATEST' | translate }}</h2>
+      <img
+        [src]="getDisplayUrl(photo)"
+        (error)="handleImageError($event)"
+        loading="lazy"
+        alt="Foto IG"
+      />
+      <p>{{ photo.caption }}</p>
+      <div class="social-icons">
+        <a [href]="getPostUrl(photo)" target="_blank"
+          ><img src="/assets/immagini/ig.png" alt="Instagram" /><h2>{{ 'INSTAGRAM.VIEW_POST' | translate }}</h2></a
+        >
+      </div>
+    </div>
+    <div class="con-card">
+      <h2>{{ 'CON.NEXT_CON' | translate }}</h2>
+      <a href="https://www.gardacon.it/"
+        ><img src="/assets/immagini/gardacon 2k25.jpg" alt="gardacon"
+      /></a>
+    </div>
+</div>
+  <app-footer></app-footer>
+</div>

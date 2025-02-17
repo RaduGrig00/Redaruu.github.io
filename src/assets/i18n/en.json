@@ -1,0 +1,36 @@
+{
+    "NAV": {
+      "HOME": "Home",
+      "ABOUT": "About",
+      "GALLERY": "Gallery",
+      "CONTACTS": "Contact Me"
+    },
+    "SEARCH": {
+      "TITLE": "Which cosplay are you looking for?",
+      "BUTTON": "Search",
+      "LABEL": "Search by character:"
+    },
+    "INSTAGRAM": {
+      "LATEST": "My latest Instagram post!",
+      "VIEW_POST": "Go to post!"
+    },
+    "CON": {
+      "NEXT_CON": "Next convention(?)"
+    },
+    "GALLERIA": {
+      "FOTOGRAFICA": "Photo Gallery",
+      "COSPLAY": "Cosplay Gallery",
+      "GLAMOUR": "Glamour Gallery"
+    },
+    "GLAMOUR": {
+      "TITLE": "View Glamour Gallery",
+      "BUTTON": "View",
+      "KOFI_MESSAGE": "If you want to view the complete gallery, you can find it on my Ko-Fi profile!",
+      "VIEW_GALLERY": "Go to gallery!"
+    },
+    "CONTATTI":{
+      "TITLE": "Conctacts",
+      "CONTATTAMI": "Conctact me",
+      "PRES": "Would you like to contact me for a collaboration? Or would you rather just know what my social media accounts are to follow me? Down here you can find all this for whatever the reason!"
+    }
+  }

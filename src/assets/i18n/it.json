@@ -1,0 +1,37 @@
+{
+    "NAV": {
+      "HOME": "Home",
+      "ABOUT": "Chi Sono",
+      "GALLERY": "Galleria",
+      "CONTACTS": "Contatti"
+    },
+    "SEARCH": {
+      "TITLE": "Quale cosplay stai cercando?",
+      "BUTTON": "Cerca",
+      "LABEL": "Cerca per personaggio:"
+    },
+    "INSTAGRAM": {
+      "LATEST": "Il mio ultimo post Instagram!",
+      "VIEW_POST": "Vai al post!"
+    },
+    "CON": {
+      "NEXT_CON": "Prossima fiera(?)"
+    },
+    "GALLERIA": {
+      "FOTOGRAFICA": "Galleria Fotografica",
+      "COSPLAY": "Galleria Cosplay",
+      "GLAMOUR": "Galleria Glamour"
+    },
+    "GLAMOUR": {
+      "TITLE": "Visualizza Galleria Glamour",
+      "BUTTON": "Visualizza",
+      "KOFI_MESSAGE": "Se vuoi visualizzare la galleria completa, puoi trovarla sul mio profilo Ko-Fi!",
+      "VIEW_GALLERY": "Vai alla galleria!"
+    },
+    "CONTATTI":{
+      "TITLE": "Contatti",
+      "CONTATTAMI": "Contattami",
+      "PRES": "Vuoi contattarmi per una collaborazione? Oppure vuoi solo sapere quali sono i miei social per potermi seguire? Qui sotto potrai trovare tutti i miei contatti per qualsiasi evenienza!"
+    }
+    
+  }

@@ -1,13 +1,17 @@
 <nav class="nav-bar" [ngClass]="{'scrolled': isScrolled}">
-  <a class="nav-brand" routerLink="/">Redaruu</a>
+  <a class="nav-brand" [routerLink]="['/', currentLang$ | async]">Redaruu</a>
   <ul class="nav-links">
-    <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
-    <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['/', currentLang$ | async]">{{ 'NAV.HOME' | translate }}</a></li> <!-- async mi permette di gestire l'observable autonamente, si iscrive e disiscrive autonomamente aggiornando i valori-->
+    <li class="nav-item"><a class="nav-link" [routerLink]="['/', currentLang$ | async, getRoute('about')]">{{ 'NAV.ABOUT' | translate }}</a></li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/galleria">Galleria</a>
+      <a class="nav-link" [routerLink]="['/', currentLang$ | async, getRoute('galleria')]">{{ 'NAV.GALLERY' | translate }}</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/contatti">Contatti</a>
+      <a class="nav-link" [routerLink]="['/', currentLang$ | async, getRoute('contatti')]">{{ 'NAV.CONTACTS' | translate }}</a>
+    </li>
+    <li class="nav-item language-switcher">
+      <button (click)="switchLang('it')" [class.active]="(currentLang$ | async) === 'it'">IT</button>
+      <button (click)="switchLang('en')" [class.active]="(currentLang$ | async) === 'en'">EN</button>
     </li>
   </ul>
 </nav>

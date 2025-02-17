@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class IgFotoService {
+  private limit: number = 1;
   private accessToken =
     'IGAAHvxZBSZBQy1BZAE16MFVJUENNeGNPU0NfeVVOOG01UlVJbmpURWdBdGI4QS1oUmVnUm1fOHJfV0EtLWwxYktsNXRQa1VBdVRKdU13UHhraFBxdFpCMEdWWUQ4aklaS1h4UFFSYWd0OXlSQlp4LTRIbmVGdG92TE5QWU9pcXZAwRQZDZD';
-  private apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,children{media_type,media_url}&access_token=${this.accessToken}`;
+  private apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink,children{media_type,media_url}&access_token=${this.accessToken}&limit=${this.limit}`;
 
   constructor(private http: HttpClient) {}
 

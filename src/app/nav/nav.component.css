@@ -13,17 +13,17 @@
 
 }
 .nav-bar.scrolled {
-  background: rgba(0, 0, 0, 0.3); /* More transparent background */
-  backdrop-filter: blur(10px); /* Increased blur effect */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Slightly more prominent shadow */
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
 }
 .nav-brand {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: "Orbitron", "sans-serif";
-  font-size: 2rem;
+  font-family: "Caveat Brush", "sans-serif";
+  font-size: 4rem;
   font-weight: 500;
   text-decoration: none;
   margin-left: 20rem;
@@ -38,9 +38,33 @@
 }
 .nav-link {
   color: white;
-  font-family: "Quicksand", "sans-serif";
+  font-family: "Caveat Brush", "sans-serif";
   font-size: 1.5rem;
   font-weight: 700;
   padding: 1rem;
   text-decoration: none;
+}
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.language-switcher button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.language-switcher button.active {
+  background: white;
+  color: black;
+}
+
+.language-switcher button:hover {
+  background: rgba(255, 255, 255, 0.1);
 }

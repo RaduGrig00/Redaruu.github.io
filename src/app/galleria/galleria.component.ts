@@ -1,5 +1,5 @@
-import { IgFotoService } from './../ig-foto.service';
 import { Component } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 interface PhotoChild {
   media_type: string;
@@ -23,13 +23,23 @@ interface Photo {
   styleUrls: ['./galleria.component.css'],
 })
 export class GalleriaComponent {
-  photos: Photo[] = [];
+  /*photos: Photo[] = [];
   selectedKeyword: string = '';
-  nextPageToken: string | null = null;
+  nextPageToken: string | null = null;*/
 
-  constructor(private IgFotoService: IgFotoService) {}
+  currentLang$ = this.languageService.currentLang$;
+  
+  constructor(private languageService: LanguageService) {}
 
-  onKeywordChange(event: any): void {
+  getGalleryPath(type: string): string[]{
+    const isEnglish = this.languageService.getCurrentLanguage() === 'en';
+    const basePath = isEnglish ? 'gallery' : 'galleria';
+    const subPath = isEnglish ? `${type}-gallery` : `galleria-${type}`
+    return ['/', this.languageService.getCurrentLanguage(), basePath, subPath];
+  }
+
+
+  /*onKeywordChange(event: any): void {
     this.selectedKeyword = event.target.value;
     this.photos = [];
     this.nextPageToken = null;
@@ -85,5 +95,6 @@ export class GalleriaComponent {
         console.error('Error fetching photos:', error);
       }
     );
-  }
+  }*/
+
 }

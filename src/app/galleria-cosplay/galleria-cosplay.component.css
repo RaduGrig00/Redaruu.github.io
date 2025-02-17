@@ -1,0 +1,210 @@
+.contenitore-pagina {
+    min-height: 100vh;
+    background-image: url('/assets/immagini/cielo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast; /*Per Chrome e Safari */
+    image-rendering: crisp-edges; /*Per Firefox */
+    -ms-interpolation-mode: nearest-neighbor; /*per IE/Edge */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 80px;
+}
+.keyword-selector {
+    margin-bottom: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center; 
+    gap: 10rem; 
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.con-card, .gallery-card{
+    width: 50%; /* Each card takes half of the container */
+    max-width: 1200px; /* Prevents them from getting too big */
+    background-color: rgba(0, 0, 0, 0.7); /* Keeps the card design */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.con-card img, .gallery-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.con-card h2 {
+    font-family: "Caveat Brush", "sans-serif";
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.gallery-card p {
+    color: white;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.gallery-card h2 {
+    font-family: "Caveat Brush", "sans-serif";
+    color: white;
+    margin-top: 0.5rem;
+}
+.social-icons img {
+    width: 24px;
+    height: auto;
+}
+.social-icons a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    gap: 1rem;
+}
+
+
+.pg {
+    width: 100%;
+    max-width: 800px;
+    color: white;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pg h2 {
+    font-family: "Caveat Brush", "sans-serif";
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.pg label {
+    font-family: "Caveat Brush", "sans-serif";
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.pg select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.pg button {
+    width: 200px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.pg button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pg-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pg-card {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    width: 1000px;
+    height: 1000px;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pg-card img {
+    max-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .con-card {
+        width: 90%;
+        margin-right: 5%;
+    }
+    .pg-card {
+        width: 90%;
+        max-width: 400px;
+        height: 400px;
+    }
+
+    .gallery-card {
+        width: 90%;
+        margin-left: 5%;
+    }
+}

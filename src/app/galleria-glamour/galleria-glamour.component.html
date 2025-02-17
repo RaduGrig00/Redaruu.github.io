@@ -1,0 +1,63 @@
+<div class="contenitore-pagina">
+    <div>
+      <app-nav></app-nav>
+    </div>
+    <div class="pg">
+      <h2>{{ 'GLAMOUR.TITLE' | translate }}</h2>
+        <button (click)="searchPg()">{{ 'GLAMOUR.BUTTON' | translate }}</button>
+    </div>
+    <div class="pg-gallery" *ngIf="glamPhotos.length > 0">
+      <button
+        class="button prev"
+        (click)="previousImage()"
+        *ngIf="currentImageIndex > 0"
+      >
+        &#8592;
+      </button>
+      <div class="pg-card">
+        <img
+          [src]="glamPhotos[currentImageIndex]"
+          (error)="handleImageError($event)"
+          alt="PG Photo"
+          loading="lazy"
+        />
+        <div class="ko-fi-link" *ngIf="currentImageIndex === 3">
+          <p *ngIf="currentImageIndex === 3">{{ 'GLAMOUR.KOFI_MESSAGE' | translate }}</p>
+          <a *ngIf="currentImageIndex === 3" href="https://ko-fi.com/redaruu" target="_blank">{{ 'GLAMOUR.VIEW_GALLERY' | translate }}</a>
+        </div>
+      </div>
+      <button
+        class="button next"
+        (click)="nextImage()"
+        *ngIf="currentImageIndex < glamPhotos.length - 1"
+      >
+        &#8594;
+      </button>
+    </div>
+    <div class="cards-container" *ngIf="!showGlamGallery">
+  
+      <div class="gallery-card" *ngFor="let photo of photos">
+        <h2>{{ 'INSTAGRAM.LATEST' | translate }}</h2>
+        <img
+          [src]="getDisplayUrl(photo)"
+          (error)="handleImageError($event)"
+          loading="lazy"
+          alt="Foto IG"
+        />
+        <p>{{ photo.caption }}</p>
+        <div class="social-icons">
+          <a [href]="getPostUrl(photo)" target="_blank"
+            ><img src="/assets/immagini/ig.png" alt="Instagram" /><h2>{{ 'INSTAGRAM.VIEW_POST' | translate }}</h2></a
+          >
+        </div>
+      </div>
+      <div class="con-card">
+        <h2>{{ 'CON.NEXT_CON' | translate }}</h2>
+        <a href="https://www.gardacon.it/"
+          ><img src="/assets/immagini/gardacon 2k25.jpg" alt="gardacon"
+        /></a>
+      </div>
+  </div>
+    <app-footer></app-footer>
+  </div>
+  

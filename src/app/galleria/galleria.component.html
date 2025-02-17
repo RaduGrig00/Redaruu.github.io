@@ -1,19 +1,19 @@
 <div class="contenitore-pagina">
-<app-nav></app-nav>
-<div class="banner">
-  <div class="banner-images">
-    <img src="assets/immagini/banner1.JPG" alt="Banner 1">
-    <img src="assets/immagini/banner2.JPG" alt="Banner 2">
-    <img src="assets/immagini/banner3.JPG" alt="Banner 3">
-    <img src="assets/immagini/banner4.JPG" alt="Banner 4">
-    <img src="assets/immagini/banner5.JPG" alt="Banner 5">
-    <img src="assets/immagini/banner6.JPG" alt="Banner 6">
+  <app-nav></app-nav>
+  <div class="banner">
+    <div class="banner-images">
+      <img src="assets/immagini/banner/banner1.JPG" alt="Banner 1" />
+      <img src="assets/immagini/banner/banner2.JPG" alt="Banner 2" />
+      <img src="assets/immagini/banner/banner3.JPG" alt="Banner 3" />
+      <img src="assets/immagini/banner/banner4.JPG" alt="Banner 4" />
+      <img src="assets/immagini/banner/banner5.JPG" alt="Banner 5" />
+      <img src="assets/immagini/banner/banner6.JPG" alt="Banner 6" />
+    </div>
+    <div class="banner-text">
+      <h1>{{ 'GALLERIA.FOTOGRAFICA' | translate }}</h1>
+    </div>
   </div>
-  <div class="banner-text">
-    <h1>Galleria fotografica</h1>
-  </div>
-</div>
-<!--<div class="keyword-selector">
+  <!--<div class="keyword-selector">
   <label for="keyword">Cerca per personaggio:</label>
   <select id="keyword" (change)="onKeywordChange($event)">
     <optgroup label="Personaggi">
@@ -45,10 +45,25 @@
     <p>{{ photo.caption }}</p>
   </div>
 </div> -->
-<div class="cosplay-gallery">
-  <div class="cosplay-banner">
-    <img src="assets/immagini/banner-cosplay.JPG" alt="Banner Cosplay">
+  <div class="gallery">
+    <div class="gallery-banner">
+      <a [routerLink]="getGalleryPath('cosplay')">
+        <img src="assets/immagini/banner-cosplay.JPG" alt="Banner Cosplay" />
+        <div class="gallery-banner-text">
+          <h2>{{ 'GALLERIA.COSPLAY' | translate }}</h2>
+        </div>
+      </a>
+    </div>
   </div>
-</div>
-<app-footer></app-footer>
+  <div class="gallery">
+    <div class="gallery-banner">
+      <a [routerLink]="getGalleryPath('glamour')">
+        <img src="assets/immagini/glamour-banner.jpg" alt="Banner Glamour" />
+        <div class="gallery-banner-text">
+          <h2>{{ 'GALLERIA.GLAMOUR' | translate }}</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>
