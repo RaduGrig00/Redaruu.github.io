@@ -1,13 +1,12 @@
 <div *ngIf="!cookiesAccepted" class="cookie-banner">
   <div>
     <p >
-      Questo sito utilizza cookie tecnici e di terze parti per garantire
-      un'esperienza di navigazione ottimale.
-      <a href="https://automattic.com/cookies/">Informativa sui cookie.</a>.
+      {{ 'COOKIES.DESC' | translate }}
+      <a href="https://automattic.com/cookies/">{{ 'COOKIES.INFO' | translate }}</a>.
     </p>
     <div class="cookie_buttons">
-      <button (click)="acceptCookies()">Accetta cookies</button>
-      <button (click)="declineCookies()">Rifiuta cookies</button>
+      <button (click)="acceptCookies()">{{ 'COOKIES.ACCEPT' | translate }}</button>
+      <button (click)="declineCookies()">{{ 'COOKIES.DECLINE' | translate }}</button>
     </div>
   </div>
 </div>

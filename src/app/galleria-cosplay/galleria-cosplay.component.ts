@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IgFotoService } from './../ig-foto.service';
+import { CookieService } from 'ngx-cookie-service';
 
 interface PhotoChild {
   media_type: string;
@@ -18,6 +19,14 @@ interface Photo {
   };
 }
 
+interface CharacterSearch {
+  name: string;
+  value: string;
+  searchCount: number;
+}
+
+
+
 @Component({
   selector: 'app-galleria-cosplay',
   templateUrl: './galleria-cosplay.component.html',
@@ -32,10 +41,57 @@ export class GalleriaCosplayComponent implements OnInit {
   currentImageIndex = 0;
   showPgGallery: boolean = false;
 
-  constructor(private igFotoService: IgFotoService) {}
+  characters: CharacterSearch[] = [
+    { name: 'Yennefer di Vengerberg', value: 'yennefer', searchCount: 0 },
+    { name: 'Triss Merigold', value: 'trisss', searchCount: 0 },
+    { name: '2B', value: '2b', searchCount: 0 },
+    { name: 'A2', value: 'a2', searchCount: 0 },
+    { name: 'Emilia', value: 'emilia', searchCount: 0 },
+    { name: 'Jinx', value: 'jinx', searchCount: 0 },
+    { name: 'Yor', value: 'yor', searchCount: 0 },
+    { name: 'Albedo', value: 'albedo', searchCount: 0 },
+    { name: 'Ariel', value: 'ariel', searchCount: 0 },
+    { name: 'Lucy', value: 'lucy', searchCount: 0 },
+    { name: 'Hinata', value: 'hinata', searchCount: 0 },
+    { name: 'Zero Two', value: 'zerotwo', searchCount: 0 },
+    { name: 'Marin', value: 'marin', searchCount: 0 },
+    { name: 'Rosalinda/Rosalina', value: 'rosalina', searchCount: 0 },
+    { name: 'Rei', value: 'rei', searchCount: 0 },
+    { name: 'Nezuko', value: 'nezuko', searchCount: 0 },
+    { name: 'Daki', value: 'daki', searchCount: 0 },
+    { name: 'Zelda', value: 'zelda', searchCount: 0 },
+    { name: 'Sakura', value: 'sakura', searchCount: 0 },
+    { name: 'Syleny', value: 'syleny', searchCount: 0 },
+    { name: 'Meridiumriaele', value: 'meridiumriaele', searchCount: 0 },
+    { name: 'Nnumeth', value: 'nnumeth', searchCount: 0 },
+    { name: 'Nilou', value: 'nilou', searchCount: 0 },
+    { name: 'Ciri', value: 'ciri', searchCount: 0 },
+    { name: 'Ahri', value: 'ahri', searchCount: 0 },
+    { name: 'Spider Demon Mother', value: 'sdm', searchCount: 0 },
+    { name: 'Evelynn', value: 'evelynn', searchCount: 0 },
+    { name: 'Yumeko', value: 'yumeko', searchCount: 0 },
+    { name: 'Asuna', value: 'asuna', searchCount: 0 },
+    { name: 'Rem', value: 'rem', searchCount: 0 },
+    { name: 'Mitsuri', value: 'mitsuri', searchCount: 0 },
+    { name: 'Kanae', value: 'kanae', searchCount: 0 },
+    { name: 'Elizabeth', value: 'elizabeth', searchCount: 0 },
+    { name: 'Touka', value: 'touka', searchCount: 0 },
+    { name: 'Kakyoin', value: 'kakyoin', searchCount: 0 },
+    { name: 'Itachi', value: 'itachi', searchCount: 0 },
+  ]
+
+  constructor(private igFotoService: IgFotoService, private cookieService: CookieService) {}
 
   ngOnInit(): void {
     this.loadPhotos();
+    this.loadSearchCounts();
+  }
+
+  loadSearchCounts(): void {
+    this.characters = this.characters.map(char => ({
+      ...char,
+      searchCount: parseInt(this.cookieService.get(`search_count_${char.value}`) || '0')
+    }));
   }
 
   getPostUrl(photo: Photo): string {
@@ -112,6 +168,19 @@ export class GalleriaCosplayComponent implements OnInit {
 
   searchPg(): void {
     if (this.selectedPg) {
+      const character = this.characters.find(char => char.value === this.selectedPg);
+      if (character) {
+        character.searchCount++;
+        this.cookieService.set(
+          `search_count_${character.value}`, 
+          character.searchCount.toString(),
+          {
+            expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
+            path: '/'
+          }
+        );
+      }
+
       //converto nome pg in minuscolo per confronto con la cartella
       const pgFolder = this.selectedPg.replace('#', '').toLowerCase();
       console.log('Selected PG:', this.selectedPg);
@@ -144,5 +213,11 @@ export class GalleriaCosplayComponent implements OnInit {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
     }
+  }
+
+  getMostSearchedCharacters(limit: number = 5): CharacterSearch[] {
+    return [...this.characters]
+      .sort((a, b) => b.searchCount - a.searchCount)
+      .slice(0, limit);
   }
 }
