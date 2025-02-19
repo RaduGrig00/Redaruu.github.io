@@ -150,19 +150,19 @@
     border-radius: 0;
     padding: 0;
     width: 1000px;
-    height: 1000px;
+    height: auto;
     box-shadow: none;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .pg-card img {
     max-width: 100%;
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
+    width: 1000px;
+    height: 1000px;
     object-fit: contain;
     border-radius: 0;
 }
@@ -190,6 +190,18 @@
 .social-icons img {
     width: 24px;
     height: 24px;
+}
+
+.pg-card .caption {
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    width: 1000px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {

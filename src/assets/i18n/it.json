@@ -42,7 +42,8 @@
     "TTDEYE_2": "e inserendo il codice 'ARU15'"
   },
   "ABOUT": {
-    "TITLE": "Chi Sono"
+    "TITLE": "Chi Sono",
+    "DESC": "Ciao sono Redaruu e sono bellissimaaaa!"
   },
   "FOOTER": {
     "HOME": "Home",
@@ -56,5 +57,13 @@
     "INFO": "Informativa sui cookies.",
     "ACCEPT": "Accetta cookies",
     "DECLINE": "Rifiuta cookies"
+  },
+  "CAPTIONS": {
+    "YENNEFER": {
+      "1": "Yennefer nel giardino di Freya"
+    },
+    "TRISS": {
+      
+    }
   }
 }

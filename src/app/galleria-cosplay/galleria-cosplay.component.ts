@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { IgFotoService } from './../ig-foto.service';
 import { CookieService } from 'ngx-cookie-service';
+import { TranslateService } from '@ngx-translate/core';
+
+interface CharacterGallery {
+  [key: string]: CharacterImage[];
+}
 
 interface PhotoChild {
   media_type: string;
@@ -25,7 +30,49 @@ interface CharacterSearch {
   searchCount: number;
 }
 
+interface CharacterImage {
+  url: string;
+  caption: string;
+}
 
+const CHARACTER_GALLERIES: CharacterGallery = {
+  yennefer: [
+    { url: 'assets/immagini/yennefer/1.jpg', caption: 'CAPTIONS.YENNEFER.1' },
+    { url: 'assets/immagini/yennefer/2.jpg', caption: 'CAPTIONS.YENNEFER.2' },
+    { url: 'assets/immagini/yennefer/3.jpg', caption: 'CAPTIONS.YENNEFER.3' },
+    { url: 'assets/immagini/yennefer/4.jpg', caption: 'CAPTIONS.YENNEFER.4' },
+    { url: 'assets/immagini/yennefer/5.jpg', caption: 'CAPTIONS.YENNEFER.5' },
+    { url: 'assets/immagini/yennefer/6.jpg', caption: 'CAPTIONS.YENNEFER.6' },
+    { url: 'assets/immagini/yennefer/7.jpg', caption: 'CAPTIONS.YENNEFER.7' },
+    { url: 'assets/immagini/yennefer/8.jpg', caption: 'CAPTIONS.YENNEFER.8' },
+    { url: 'assets/immagini/yennefer/9.jpg', caption: 'CAPTIONS.YENNEFER.9' },
+    { url: 'assets/immagini/yennefer/10.jpg', caption: 'CAPTIONS.YENNEFER.10' },
+  ],
+  triss: [
+    { url: 'assets/immagini/triss/1.jpg', caption: '' },
+    { url: 'assets/immagini/triss/2.jpg', caption: '' },
+    { url: 'assets/immagini/triss/3.jpg', caption: '' },
+    { url: 'assets/immagini/triss/4.jpg', caption: '' },
+    { url: 'assets/immagini/triss/5.jpg', caption: '' },
+    { url: 'assets/immagini/triss/6.jpg', caption: '' },
+    { url: 'assets/immagini/triss/7.jpg', caption: '' },
+    { url: 'assets/immagini/triss/8.jpg', caption: '' },
+    { url: 'assets/immagini/triss/9.jpg', caption: '' },
+    { url: 'assets/immagini/triss/10.jpg', caption: '' },
+  ],
+  '2b': [
+    { url: 'assets/immagini/2b/1.jpg', caption: '' },
+    { url: 'assets/immagini/2b/2.jpg', caption: '' },
+    { url: 'assets/immagini/2b/3.jpg', caption: '' },
+    { url: 'assets/immagini/2b/4.jpg', caption: '' },
+    { url: 'assets/immagini/2b/5.jpg', caption: '' },
+    { url: 'assets/immagini/2b/6.jpg', caption: '' },
+    { url: 'assets/immagini/2b/7.jpg', caption: '' },
+    { url: 'assets/immagini/2b/8.jpg', caption: '' },
+    { url: 'assets/immagini/2b/9.jpg', caption: '' },
+    { url: 'assets/immagini/2b/10.jpg', caption: '' },
+  ],
+};
 
 @Component({
   selector: 'app-galleria-cosplay',
@@ -37,7 +84,7 @@ export class GalleriaCosplayComponent implements OnInit {
   nextPageToken: string | null = null;
 
   selectedPg: string = '';
-  pgPhotos: string[] = [];
+  pgPhotos: CharacterImage[] = [];
   currentImageIndex = 0;
   showPgGallery: boolean = false;
 
@@ -78,9 +125,13 @@ export class GalleriaCosplayComponent implements OnInit {
     { name: 'Touka', value: 'touka', searchCount: 0 },
     { name: 'Kakyoin', value: 'kakyoin', searchCount: 0 },
     { name: 'Itachi', value: 'itachi', searchCount: 0 },
-  ]
+  ];
 
-  constructor(private igFotoService: IgFotoService, private cookieService: CookieService) {}
+  constructor(
+    private igFotoService: IgFotoService,
+    private cookieService: CookieService,
+    private translateService: TranslateService
+  ) {}
 
   ngOnInit(): void {
     this.loadPhotos();
@@ -88,9 +139,11 @@ export class GalleriaCosplayComponent implements OnInit {
   }
 
   loadSearchCounts(): void {
-    this.characters = this.characters.map(char => ({
+    this.characters = this.characters.map((char) => ({
       ...char,
-      searchCount: parseInt(this.cookieService.get(`search_count_${char.value}`) || '0')
+      searchCount: parseInt(
+        this.cookieService.get(`search_count_${char.value}`) || '0'
+      ),
     }));
   }
 
@@ -160,7 +213,7 @@ export class GalleriaCosplayComponent implements OnInit {
   handleImageError(event: any): void {
     console.error('Image failed to load:', event.target.src);
     const failedUrl = event.target.src;
-    this.pgPhotos = this.pgPhotos.filter((url) => url !== failedUrl);
+    this.pgPhotos = this.pgPhotos.filter((photo) => photo.url !== failedUrl);
     if (this.currentImageIndex >= this.pgPhotos.length) {
       this.currentImageIndex = Math.max(0, this.pgPhotos.length - 1);
     }
@@ -168,40 +221,51 @@ export class GalleriaCosplayComponent implements OnInit {
 
   searchPg(): void {
     if (this.selectedPg) {
-      const character = this.characters.find(char => char.value === this.selectedPg);
-      if (character) {
-        character.searchCount++;
-        this.cookieService.set(
-          `search_count_${character.value}`, 
-          character.searchCount.toString(),
-          {
-            expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
-            path: '/'
-          }
-        );
+      const character = this.characters.find(
+        (char) => char.value === this.selectedPg
+      );
+      if (!character) {
+        console.error('Pg non trovato:', this.selectedPg);
+        return;
       }
 
-      //converto nome pg in minuscolo per confronto con la cartella
-      const pgFolder = this.selectedPg.replace('#', '').toLowerCase();
-      console.log('Selected PG:', this.selectedPg);
-      this.pgPhotos = [
-        `assets/immagini/${pgFolder}/1.jpg`,
-        `assets/immagini/${pgFolder}/2.jpg`,
-        `assets/immagini/${pgFolder}/3.jpg`,
-        `assets/immagini/${pgFolder}/4.jpg`,
-        `assets/immagini/${pgFolder}/5.jpg`,
-        `assets/immagini/${pgFolder}/6.jpg`,
-        `assets/immagini/${pgFolder}/7.jpg`,
-        `assets/immagini/${pgFolder}/8.jpg`,
-        `assets/immagini/${pgFolder}/9.jpg`,
-        `assets/immagini/${pgFolder}/10.jpg`,
-      ];
+      character.searchCount++;
+      this.cookieService.set(
+        `search_count_${character.value}`,
+        character.searchCount.toString(),
+        {
+          expires: new Date(
+            new Date().setFullYear(new Date().getFullYear() + 1)
+          ),
+          path: '/',
+        }
+      );
+
+      const galleryData = CHARACTER_GALLERIES[character.value];
+      if (galleryData) {
+        this.pgPhotos = galleryData.map((photo, index) => ({
+          url: photo.url,
+          caption: this.translateService.instant(
+            `CAPTIONS.${character.value.toUpperCase()}.${index + 1}`
+          )
+        }));
+      } else {
+        const pgFolder = character.value.replace('#', '').toLowerCase();
+        this.pgPhotos = Array.from({ length: 10 }, (_, i) => ({
+          url: `assets/immagini/${pgFolder}/${i + 1}.jpg`,
+          caption: this.translateService.instant(
+            `CAPTIONS.${character.value.toUpperCase()}.${i + 1}`,
+            { fallbackText: `${character.name} - Photo ${i + 1}` }
+          )
+        }));
+      }
       this.currentImageIndex = 0; //resetta alla prima immagine
+      this.showPgGallery = true;
     } else {
       this.pgPhotos = [];
       this.currentImageIndex = 0;
+      this.showPgGallery = true;
     }
-    this.showPgGallery = true;
   }
 
   nextImage(): void {

@@ -59,11 +59,14 @@
     </button>
     <div class="pg-card">
       <img
-        [src]="pgPhotos[currentImageIndex]"
+        [src]="pgPhotos[currentImageIndex].url"
         (error)="handleImageError($event)"
         alt="PG Photo"
         loading="lazy"
       />
+      <p class="caption" *ngIf="pgPhotos[currentImageIndex].caption">
+        {{ pgPhotos[currentImageIndex].caption }}
+      </p>
     </div>
     <button
       class="button next"

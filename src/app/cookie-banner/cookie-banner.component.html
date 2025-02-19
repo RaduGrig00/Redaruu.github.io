@@ -1,12 +1,12 @@
 <div *ngIf="!cookiesAccepted" class="cookie-banner">
   <div>
     <p >
-      {{ 'COOKIES.DESC' | translate }}
-      <a href="https://automattic.com/cookies/">{{ 'COOKIES.INFO' | translate }}</a>.
+      {{ 'COOKIE.DESC' | translate }}
+      <a href="https://automattic.com/cookies/" target="_blank">{{ 'COOKIE.INFO' | translate }}</a>.
     </p>
     <div class="cookie_buttons">
-      <button (click)="acceptCookies()">{{ 'COOKIES.ACCEPT' | translate }}</button>
-      <button (click)="declineCookies()">{{ 'COOKIES.DECLINE' | translate }}</button>
+      <button (click)="acceptCookies()">{{ 'COOKIE.ACCEPT' | translate }}</button>
+      <button (click)="declineCookies()">{{ 'COOKIE.DECLINE' | translate }}</button>
     </div>
   </div>
 </div>
