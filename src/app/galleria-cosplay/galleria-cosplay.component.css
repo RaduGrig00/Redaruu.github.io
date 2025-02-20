@@ -204,6 +204,12 @@
     box-sizing: border-box;
 }
 
+.warning-message {
+    color: #ff4444;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 768px) {
     .con-card {
         width: 90%;

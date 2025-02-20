@@ -8,7 +8,7 @@
       <label for="keyword">{{ 'SEARCH.LABEL' | translate }}</label>
       <select id="keyword" [(ngModel)]="selectedPg">
         <optgroup label="Personaggi">
-          <option value="yennefer">Yennefer di Vengerberg</option>
+          <option value="yennefer">{{ 'SEARCH.YEN' | translate }}</option>
           <option value="triss">Triss Merigold</option>
           <option value="2b">2B</option>
           <option value="a2">A2</option>
@@ -21,7 +21,7 @@
           <option value="hinata">Hinata Hyuga</option>
           <option value="zerotwo">Zero Two</option>
           <option value="marin">Marin Kitagawa</option>
-          <option value="rosalina">Rosalinda/Rosalina</option>
+          <option value="rosalina">{{ 'SEARCH.ROS' | translate }}</option>
           <option value="rei">Rei Ayanami</option>
           <option value="nezuko">Nezuko</option>
           <option value="daki">Daki</option>
@@ -47,6 +47,7 @@
         </optgroup>
       </select>
       <button (click)="searchPg()">{{ 'SEARCH.BUTTON' | translate }}</button>
+      <p class="warning-message" *ngIf="!selectedPg && searchAttempted">{{ 'WARNINGS.SELECT_CHARACTER' | translate }}</p>
     </div>
   </div>
   <div class="pg-gallery" *ngIf="pgPhotos.length > 0">
