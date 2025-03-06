@@ -65,9 +65,11 @@
         alt="PG Photo"
         loading="lazy"
       />
+    <div class="caption-container">
       <p class="caption" *ngIf="pgPhotos[currentImageIndex].caption">
         {{ pgPhotos[currentImageIndex].caption }}
       </p>
+    </div>
     </div>
     <button
       class="button next"
