@@ -1,0 +1,500 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "Chi Sono",
+    "GALLERY": "Galleria",
+    "CONTACTS": "Contatti"
+  },
+  "SEARCH": {
+    "TITLE": "Quale cosplay stai cercando?",
+    "BUTTON": "Cerca",
+    "LABEL": "Cerca per personaggio:",
+    "YEN": "Yennefer di Vengerberg",
+    "ROS": "Rosalinda"
+  },
+  "INSTAGRAM": {
+    "LATEST": "Il mio ultimo post Instagram!",
+    "VIEW_POST": "Vai al post!"
+  },
+  "CON": {
+    "NEXT_CON": "Prossima fiera(?)"
+  },
+  "GALLERIA": {
+    "FOTOGRAFICA": "Galleria Fotografica",
+    "COSPLAY": "Galleria Cosplay",
+    "GLAMOUR": "Galleria Glamour"
+  },
+  "GLAMOUR": {
+    "TITLE": "Visualizza Galleria Glamour",
+    "BUTTON": "Visualizza",
+    "KOFI_MESSAGE": "Se vuoi visualizzare la galleria completa, puoi trovarla sul mio profilo Ko-Fi!",
+    "VIEW_GALLERY": "Vai alla galleria!"
+  },
+  "CONTATTI": {
+    "TITLE": "Contatti",
+    "CONTATTAMI": "Contattami",
+    "PRES": "Vuoi contattarmi per una collaborazione? Oppure vuoi solo sapere quali sono i miei social per potermi seguire?\nQui sotto potrai trovare tutti i miei contatti per qualsiasi evenienza!",
+    "ANIBIU_1": "Codice sconto 15% ",
+    "ANIBIU_2": "con il codice 'REDSUNRISE'",
+    "KAME_1": "Codice sconto 10% ",
+    "KAME_2": "con il codice 'REDSUNRISE10'",
+    "MOCO_1": "Codice sconto 10% ",
+    "MOCO_2": "con il codice 'ARU'",
+    "TTDEYE_1": "Codice sconto 15% cliccando il link affiliato: ",
+    "TTDEYE_2": "e inserendo il codice 'ARU15'"
+  },
+  "ABOUT": {
+    "TITLE": "Chi Sono",
+    "DESC": "Ciao! Benvenut* nella mia pagina!\nSono Aru e sono una cosplayer dal 2017. Sono stata introdotta a questo mondo pazzesco da degli amici che mi hanno portato alla mia prima fiera del fumetto indossando il mio primo cosplay, Ymir dalla serie di Attack on Titan.\nDa lì tutto è cambiato: ho scoperto un nuovo universo pieno di colore, di fantasia e di appassionati dediti a questa passione con tutto il cuore, a cui non ho potuto fare a meno di aggregarmi.\nLa maggior parte dei miei cosplay rappresentano personaggi di anime, data la mia evidente passione per il mondo nipponico.\nMa negli ultimi anni ho iniziato a portare spesso anche cosplay dei miei videogiochi preferiti, come Nier e The Witcher.\nUltima implementazione, niente poco di meno che Arwen direttamente da un film colossal: Il Signore degli Anelli!\nLei è il mio traguardo più grande, poiché cerco di aumentare giorno per giorno la qualità di costumi, props e make-up (all’ultimo sono particolarmente appassionata e potete visionare anche qualche bodypainting sul mio profilo).\nPer qualsiasi domanda, proposte di shooting o di collaborazioni, puoi contattarmi su Instagram o via mail, che trovate tra i contatti sul sito.\nTrovi anche una sezione apposita con tutti i miei codici per degli sconti su siti:\n- Di parrucche\n- Lenti\n- E tanto altro (tornano sempre utili a noi cosplayer eheh)\nSe ti piacciono i miei lavori e vuoi sostenermi, puoi offrirmi un caffè su Ko-Fi e ricevere un ringraziamento speciale! "
+  },
+  "FOOTER": {
+    "HOME": "Home",
+    "ABOUT": "Chi Sono",
+    "GALLERY": "Galleria",
+    "CONTACTS": "Contatti",
+    "CONTACTME": "Contattami"
+  },
+  "COOKIE": {
+    "DESC": "Questo sito utilizza cookie tecnici e di terze parti per garantire un'esperienza di navigazione ottimale.",
+    "INFO": "Informativa sui cookies.",
+    "ACCEPT": "Accetta cookies",
+    "DECLINE": "Rifiuta cookies"
+  },
+  "WARNINGS": {
+    "SELECT_CHARACTER": "Per favore, seleziona un personaggio prima di cercare"
+  },
+  "CAPTIONS": {
+    "YENNEFER": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "TRISS": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "2B": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "A2": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "EMILIA": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "JINX": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "YOR": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ALBEDO": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ARIEL": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "LUCY": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "HINATA": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ZEROTWO": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "MARIN": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ROSALINA": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "REI": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "NEZUKO": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "DAKI": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ZELDA": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "SAKURA": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "SYLENY": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "MERIDIUMRIAELE": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "NNUMETH": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "NILOU": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "CIRI": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "AHRI": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "SDM": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "EVELYNN": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "YUMEKO": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ASUNA": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "REM": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "MITSURI": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "KANAE": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ELIZABETH": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "TOUKA": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "KAKYOIN": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "ITACHI": {
+      "1": "Yennefer nel giardino di Freya",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    }
+  }
+}
